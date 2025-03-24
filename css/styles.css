@@ -1,0 +1,281 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 60px;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #e74c3c;
+}
+
+.hero {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.search-bar input {
+    padding: 1rem;
+    width: 70%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 1rem 2rem;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #c0392b;
+}
+
+.featured, .trending-courses {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 1rem auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.featured h2, .trending-courses h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.college-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.college-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.college-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.college-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.college-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.college-card p {
+    margin: 0.5rem 0;
+    color: #7f8c8d;
+}
+
+.fee-hidden {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fee-hidden span {
+    display: none;
+    color: #e74c3c;
+}
+
+.fee-hidden button {
+    background: #3498db;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+.contact-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.contact-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-buttons button:nth-child(1) {
+	background: #d4ac0d;
+}
+
+.contact-buttons button:nth-child(1):hover {
+    background: #d4ac0d;
+}
+
+.contact-buttons button:nth-child(2) {
+	background: #d4ac0d;
+}
+
+.contact-buttons button:nth-child(2):hover {
+    background: #d4ac0d;
+}
+
+.contact-buttons button:nth-child(3) {
+    background: #d4ac0d;
+}
+
+.contact-buttons button:nth-child(3):hover {
+    background: #d4ac0d;
+}
+
+.trending-courses .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.course-card {
+    background: #3498db;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    background: #2980b9;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 3rem 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    background: #e74c3c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #c0392b;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #34495e;
+    padding-top: 1rem;
+}

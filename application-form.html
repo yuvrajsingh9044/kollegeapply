@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - Kollegeapply</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Kollegeapply Logo" class="logo"></a>
+        <h1>Application Form</h1>
+    </header>
+    <section class="form-container">
+        <form id="applicationForm" onsubmit="submitForm(event)">
+            <div class="form-step" id="step1">
+                <h2>Personal Details</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <button type="button" onclick="nextStep(2)">Next</button>
+            </div>
+            <div class="form-step hidden" id="step2">
+                <h2>Academic History</h2>
+                <input type="text" placeholder="School Name" required>
+                <input type="number" placeholder="Percentage" required>
+                <button type="button" onclick="nextStep(3)">Next</button>
+            </div>
+            <div class="form-step hidden" id="step3">
+                <h2>Course Selection</h2>
+                <select required>
+                    <option value="">Select Course</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="business">Business</option>
+                </select>
+                <button type="button" onclick="nextStep(4)">Next</button>
+            </div>
+            <div class="form-step hidden" id="step4">
+                <h2>Upload Documents</h2>
+                <input type="file" multiple>
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

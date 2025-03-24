@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kollegeapply - Discover Your Future</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="Kollegeapply Logo" class="logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#colleges">Colleges</a>
+            <a href="#courses">Courses</a>
+            <a href="application-form.html">Apply Now</a>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <h1>Welcome to Kollegeapply</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Colleges, Courses, Locations" id="searchInput">
+            <button onclick="searchColleges()">Find Colleges</button>
+        </div>
+    </section>
+    <section class="featured" id="colleges">
+        <h2>Featured Colleges</h2>
+        <div class="college-grid" id="collegeGrid">
+            <!-- College 1 -->
+            <div class="college-card" onclick="window.location.href='college-detail.html?name=University of Allahabad'">
+                <img src="assets/images/aulogo.png" alt="AU Logo" class="college-logo">
+                <h3>University of Allahabad</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA, LLB, BALLB, B.COM, BBA, BCA, B.Sc.</p>
+                <p class="fee-hidden">Fees: <span>₹3,500/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Prayagraj, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-532-2461083')">Call</button>
+                    <button onclick="alert('Email: registrar@allduniv.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.allduniv.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 2 -->
+            <div class="college-card" onclick="window.location.href='college-detail.html?name=IERT Allahabad'">
+                <img src="assets/images/iert_logo.png" alt="IERT Logo" class="college-logo">
+                <h3>Institute of Engineering and Rural Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, Politechnic (Plastic, Civil, Mechanical, Electrical)</p>
+                <p class="fee-hidden">Fees: <span>₹54,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Allahabad, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-532-2544810')">Call</button>
+                    <button onclick="alert('Email: info@iert.ac.in')">Email</button>
+                    <button onclick="window.open('https://iert.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 3 -->
+            <div class="college-card" onclick="window.location.href='college-detail.html?name=SIET Prayagraj'">
+                <img src="assets/images/sit_logo.png" alt="SIET Logo" class="college-logo">
+                <h3>Shambhunath Institute of Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹79,400/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Prayagraj, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-532-2256500')">Call</button>
+                    <button onclick="alert('Email: info@siet.in')">Email</button>
+                    <button onclick="window.open('https://www.siet.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 4 -->
+            <div class="college-card" onclick="window.location.href='college-detail.html?name=KNIT Sultanpur'">
+                <img src="assets/images/knit_logo.png" alt="KNIT Logo" class="college-logo">
+                <h3>Kamla Nehru Institute of Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech</p>
+                <p class="fee-hidden">Fees: <span>₹64,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Sultanpur, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-5362-240454')">Call</button>
+                    <button onclick="alert('Email: director@knit.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.knit.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 5 -->
+            <div class="college-card" onclick="window.location.href='college-detail.html?name=MNNIT Allahabad'">
+                <img src="assets/images/mnnit_logo.png" alt="MNNIT Logo" class="college-logo">
+                <h3>Motilal Nehru National Institute of Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MCA</p>
+                <p class="fee-hidden">Fees: <span>₹1,25,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Allahabad, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-532-2545404')">Call</button>
+                    <button onclick="alert('Email: academics@mnnit.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.mnnit.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 6 -->
+            <div class="college-card" onclick="window.location.href='college-detail.html?name=United Institute of Technology'">
+                <img src="assets/images/united_logo.png" alt="United Logo" class="college-logo">
+                <h3>United Institute of Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹85,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Allahabad, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-532-2686070')">Call</button>
+                    <button onclick="alert('Email: info@united.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.united.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 7 -->
+            <div class="college-card">
+                <img src="assets/images/iiit_logo.png" alt="IIIT Logo" class="college-logo">
+                <h3>Indian Institute of Information Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech</p>
+                <p class="fee-hidden">Fees: <span>₹1,36,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Allahabad, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-532-2922000')">Call</button>
+                    <button onclick="alert('Email: contact@iiita.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.iiita.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 8 -->
+            <div class="college-card">
+                <img src="assets/images/bhu_logo.png" alt="BHU Logo" class="college-logo">
+                <h3>Banaras Hindu University</h3>
+                <p><strong>Courses:</strong> B.Tech, MBA, BALLB, LLM, B.Sc(Hons.) , P.hd</p>
+                <p class="fee-hidden">Fees: <span>₹10,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Varanasi, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-542-2368938')">Call</button>
+                    <button onclick="alert('Email: registrar@bhu.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.bhu.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 9 -->
+            <div class="college-card">
+                <img src="assets/images/iitd_logo.png" alt="IIT Delhi Logo" class="college-logo">
+                <h3>Indian Institute of Technology Delhi</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹2,20,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> New Delhi</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-11-26597135')">Call</button>
+                    <button onclick="alert('Email: registrar@iitd.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.iitd.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 10 -->
+            <div class="college-card">
+                <img src="assets/images/iitb_logo.png" alt="IIT Bombay Logo" class="college-logo">
+                <h3>Indian Institute of Technology Bombay</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, PhD</p>
+                <p class="fee-hidden">Fees: <span>₹2,30,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Mumbai, Maharashtra</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-22-25722545')">Call</button>
+                    <button onclick="alert('Email: registrar@iitb.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.iitb.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 11 -->
+            <div class="college-card">
+                <img src="assets/images/iitm_logo.png" alt="IIT Madras Logo" class="college-logo">
+                <h3>Indian Institute of Technology Madras</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹2,10,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-44-22574000')">Call</button>
+                    <button onclick="alert('Email: registrar@iitm.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.iitm.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 12 -->
+            <div class="college-card">
+                <img src="assets/images/iitk_logo.png" alt="IIT Kanpur Logo" class="college-logo">
+                <h3>Indian Institute of Technology Kanpur</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, PhD</p>
+                <p class="fee-hidden">Fees: <span>₹2,15,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Kanpur, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-512-2590151')">Call</button>
+                    <button onclick="alert('Email: registrar@iitk.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.iitk.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 13 -->
+            <div class="college-card">
+                <img src="assets/images/bits_logo.png" alt="BITS Pilani Logo" class="college-logo">
+                <h3>BITS Pilani</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹4,50,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Pilani, Rajasthan</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-1596-245073')">Call</button>
+                    <button onclick="alert('Email: admissions@bits-pilani.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.bits-pilani.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 14 -->
+            <div class="college-card">
+                <img src="assets/images/vit_logo.png" alt="VIT Vellore Logo" class="college-logo">
+                <h3>VIT Vellore</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹2,50,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Vellore, Tamil Nadu</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-416-2243091')">Call</button>
+                    <button onclick="alert('Email: info@vit.ac.in')">Email</button>
+                    <button onclick="window.open('https://vit.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 15 -->
+            <div class="college-card">
+                <img src="assets/images/nitw_logo.png" alt="NIT Warangal Logo" class="college-logo">
+                <h3>National Institute of Technology Warangal</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MCA</p>
+                <p class="fee-hidden">Fees: <span>₹1,30,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Warangal, Telangana</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-870-2459191')">Call</button>
+                    <button onclick="alert('Email: registrar@nitw.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.nitw.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 16 -->
+            <div class="college-card">
+                <img src="assets/images/jadavpur_logo.png" alt="Jadavpur University Logo" class="college-logo">
+                <h3>Jadavpur University</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MCA</p>
+                <p class="fee-hidden">Fees: <span>₹5,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Kolkata, West Bengal</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-33-24572227')">Call</button>
+                    <button onclick="alert('Email: registrar@jadavpuruniversity.in')">Email</button>
+                    <button onclick="window.open('https://www.jadavpuruniversity.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 17 -->
+            <div class="college-card">
+                <img src="assets/images/anna_logo.png" alt="Anna University Logo" class="college-logo">
+                <h3>Anna University</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹50,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-44-22357004')">Call</button>
+                    <button onclick="alert('Email: registrar@annauniv.edu')">Email</button>
+                    <button onclick="window.open('https://www.annauniv.edu', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 18 -->
+            <div class="college-card">
+                <img src="assets/images/du_logo.png" alt="Delhi University Logo" class="college-logo">
+                <h3>Delhi University</h3>
+                <p><strong>Courses:</strong> BBA, BCA, BALLB</p>
+                <p class="fee-hidden">Fees: <span>₹20,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> New Delhi</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-11-27006900')">Call</button>
+                    <button onclick="alert('Email: registrar@du.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.du.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 19 -->
+            <div class="college-card">
+                <img src="assets/images/srm_logo.png" alt="SRM University Logo" class="college-logo">
+                <h3>SRM Institute of Science and Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹2,50,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-44-27417000')">Call</button>
+                    <button onclick="alert('Email: infodesk@srmist.edu.in')">Email</button>
+                    <button onclick="window.open('https://www.srmist.edu.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 20 -->
+            <div class="college-card">
+                <img src="assets/images/amity_logo.png" alt="Amity University Logo" class="college-logo">
+                <h3>Amity University</h3>
+                <p><strong>Courses:</strong> B.Tech, MBA, BBA</p>
+                <p class="fee-hidden">Fees: <span>₹2,00,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Noida, UP</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-120-4392000')">Call</button>
+                    <button onclick="alert('Email: admissions@amity.edu')">Email</button>
+                    <button onclick="window.open('https://www.amity.edu', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 21 -->
+            <div class="college-card">
+                <img src="assets/images/lpu_logo.png" alt="LPU Logo" class="college-logo">
+                <h3>Lovely Professional University</h3>
+                <p><strong>Courses:</strong> B.Tech, MBA, BCA</p>
+                <p class="fee-hidden">Fees: <span>₹1,90,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Phagwara, Punjab</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-1824-404404')">Call</button>
+                    <button onclick="alert('Email: admissions@lpu.co.in')">Email</button>
+                    <button onclick="window.open('https://www.lpu.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 22 -->
+            <div class="college-card">
+                <img src="assets/images/chandigarh_logo.png" alt="Chandigarh University Logo" class="college-logo">
+                <h3>Chandigarh University</h3>
+                <p><strong>Courses:</strong> B.Tech, MBA, BCA</p>
+                <p class="fee-hidden">Fees: <span>₹1,70,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Chandigarh</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-160-3051000')">Call</button>
+                    <button onclick="alert('Email: admissions@cumail.in')">Email</button>
+                    <button onclick="window.open('https://www.cuchd.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 23 -->
+            <div class="college-card">
+                <img src="assets/images/nitk_logo.png" alt="NITK Surathkal Logo" class="college-logo">
+                <h3>National Institute of Technology Karnataka</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MCA</p>
+                <p class="fee-hidden">Fees: <span>₹1,40,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Surathkal, Karnataka</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-824-2474000')">Call</button>
+                    <button onclick="alert('Email: registrar@nitk.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.nitk.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 24 -->
+            <div class="college-card">
+                <img src="assets/images/thapar_logo.png" alt="Thapar University Logo" class="college-logo">
+                <h3>Thapar Institute of Engineering and Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹3,00,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Patiala, Punjab</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-175-2393021')">Call</button>
+                    <button onclick="alert('Email: registrar@thapar.edu')">Email</button>
+                    <button onclick="window.open('https://www.thapar.edu', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 25 -->
+            <div class="college-card">
+                <img src="assets/images/psg_logo.png" alt="PSG College Logo" class="college-logo">
+                <h3>PSG College of Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MCA</p>
+                <p class="fee-hidden">Fees: <span>₹80,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-422-2572177')">Call</button>
+                    <button onclick="alert('Email: principal@psgtech.edu')">Email</button>
+                    <button onclick="window.open('https://www.psgtech.edu', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 26 -->
+            <div class="college-card">
+                <img src="assets/images/manipal_logo.png" alt="Manipal University Logo" class="college-logo">
+                <h3>Manipal Institute of Technology</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MBA</p>
+                <p class="fee-hidden">Fees: <span>₹3,50,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Manipal, Karnataka</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-820-2922400')">Call</button>
+                    <button onclick="alert('Email: admissions@manipal.edu')">Email</button>
+                    <button onclick="window.open('https://manipal.edu', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 27 -->
+            <div class="college-card">
+                <img src="assets/images/coep_logo.png" alt="COEP Logo" class="college-logo">
+                <h3>College of Engineering Pune</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech</p>
+                <p class="fee-hidden">Fees: <span>₹90,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Pune, Maharashtra</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-20-25507000')">Call</button>
+                    <button onclick="alert('Email: registrar@coep.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.coep.org.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 28 -->
+            <div class="college-card">
+                <img src="assets/images/nitt_logo.png" alt="NIT Trichy Logo" class="college-logo">
+                <h3>National Institute of Technology Trichy</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, MCA</p>
+                <p class="fee-hidden">Fees: <span>₹1,50,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Tiruchirappalli, Tamil Nadu</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-431-2503000')">Call</button>
+                    <button onclick="alert('Email: registrar@nitt.edu')">Email</button>
+                    <button onclick="window.open('https://www.nitt.edu', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 29 -->
+            <div class="college-card">
+                <img src="assets/images/jnu_logo.png" alt="JNU Logo" class="college-logo">
+                <h3>Jawaharlal Nehru University</h3>
+                <p><strong>Courses:</strong> BA, MA, PhD</p>
+                <p class="fee-hidden">Fees: <span>₹5,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> New Delhi</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-11-26704000')">Call</button>
+                    <button onclick="alert('Email: registrar@jnu.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.jnu.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+            <!-- College 30 -->
+            <div class="college-card">
+                <img src="assets/images/iisc_logo.png" alt="IISc Logo" class="college-logo">
+                <h3>Indian Institute of Science</h3>
+                <p><strong>Courses:</strong> B.Tech, M.Tech, PhD</p>
+                <p class="fee-hidden">Fees: <span>₹2,00,000/year</span> <button onclick="toggleFees(event, this)">Show</button></p>
+                <p><strong>Location:</strong> Bangalore, Karnataka</p>
+                <div class="contact-buttons">
+                    <button onclick="alert('Call: +91-80-22932000')">Call</button>
+                    <button onclick="alert('Email: registrar@iisc.ac.in')">Email</button>
+                    <button onclick="window.open('https://www.iisc.ac.in', '_blank')">Website</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="trending-courses" id="courses">
+        <h2>Trending Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">B.Tech in Computer Science</div>
+            <div class="course-card">B.Tech in Electronics & Communication</div>
+            <div class="course-card">B.Tech in Electrical Engineering</div>
+            <div class="course-card">B.Tech in Civil Engineering</div>
+            <div class="course-card">B.Tech in Artificial Intelligence</div>
+            <div class="course-card">MBA</div>
+            <div class="course-card">BBA</div>
+            <div class="course-card">BCA</div>
+            <div class="course-card">MCA</div>
+            <div class="course-card">BALLB</div>
+            <div class="course-card">LLM</div>
+            <div class="course-card">Diploma in Civil Engineering</div>
+            <div class="course-card">Diploma in Mechanical Engineering</div>
+            <div class="course-card">Diploma in Plastic Technology</div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><img src="assets/images/social/facebook.png" alt="Facebook"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="assets/images/social/twitter.png" alt="Twitter"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="assets/images/social/instagram.png" alt="Instagram"></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="assets/images/social/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kollegeapply. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

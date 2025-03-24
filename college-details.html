@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Details - Kollegeapply</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="assets/images/logo.png" alt="Kollegeapply Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#colleges">Colleges</a>
+            <a href="index.html#courses">Courses</a>
+            <a href="application-form.html">Apply Now</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1 id="collegeName">College Name</h1>
+        </header>
+        <section class="college-details">
+            <img id="collegeLogo" src="" alt="College Logo" class="college-logo">
+            <h2>Course Details</h2>
+            <p id="courseDetails">Loading...</p>
+            <p><strong>Eligibility:</strong> 12th Grade with 60%+ (varies by course)</p>
+            <p><strong>Fees:</strong> <span id="fees">Loading...</span></p>
+            <p><strong>Location:</strong> <span id="location">Loading...</span></p>
+            <p><a id="website" href="#" target="_blank">Visit Website</a></p>
+            <div class="contact-buttons">
+                <button id="callButton">Call</button>
+                <button id="emailButton">Email</button>
+            </div>
+            <button onclick="window.location.href='application-form.html'">Apply Now</button>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const collegeName = urlParams.get('name');
+        document.getElementById('collegeName').textContent = collegeName || 'Unknown College';
+        const collegeData = {
+            'University of Allahabad': { courses: 'B.Tech, M.Tech, MBA, BALLB', fees: '₹3,500/year', location: 'Prayagraj, UP', website: 'https://www.allduniv.ac.in', logo: 'aulogo.png', call: '+91-532-2461083', email: 'registrar@allduniv.ac.in' },
+            'IERT Allahabad': { courses: 'B.Tech, Diploma (Civil, Mechanical)', fees: '₹54,000/year', location: 'Allahabad, UP', website: 'https://iert.ac.in', logo: 'iert_logo.png', call: '+91-532-2544810', email: 'info@iert.ac.in' },
+            'SIET Prayagraj': { courses: 'B.Tech, M.Tech, MBA', fees: '₹79,400/year', location: 'Prayagraj, UP', website: 'https://www.siet.in', logo: 'sit_logo.png', call: '+91-532-2256500', email: 'info@siet.in' },
+            'KNIT Sultanpur': { courses: 'B.Tech, M.Tech', fees: '₹64,000/year', location: 'Sultanpur, UP', website: 'https://www.knit.ac.in', logo: 'knit_logo.png', call: '+91-5362-240454', email: 'director@knit.ac.in' },
+            'MNNIT Allahabad': { courses: 'B.Tech, M.Tech, MCA', fees: '₹1,25,000/year', location: 'Allahabad, UP', website: 'https://www.mnnit.ac.in', logo: 'mnnit_logo.png', call: '+91-532-2545404', email: 'academics@mnnit.ac.in' }
+            // Add more colleges here
+        };
+        const data = collegeData[collegeName] || { courses: 'N/A', fees: 'N/A', location: 'N/A', website: '#', logo: '', call: '', email: '' };
+        document.getElementById('courseDetails').textContent = data.courses;
+        document.getElementById('fees').textContent = data.fees;
+        document.getElementById('location').textContent = data.location;
+        document.getElementById('website').href = data.website;
+        document.getElementById('collegeLogo').src = `assets/images/${data.logo}`;
+        document.getElementById('callButton').onclick = () => alert(`Call: ${data.call}`);
+        document.getElementById('emailButton').onclick = () => alert(`Email: ${data.email}`);
+    </script>
+</body>
+</html>
